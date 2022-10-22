@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'components/number_button.dart';
 
 void main() {
   runApp(const MyApp());
@@ -37,7 +38,23 @@ class _GameScreenState extends State<GameScreen> {
         padding: const EdgeInsets.all(18.0),
         child: Column(
           children: <Widget>[
-            const TextField(),
+            Container(
+              width: double.infinity,
+              height: 50,
+              decoration: BoxDecoration(border: Border.all()),
+              child: const Align(
+                child: Text(
+                  '***',
+                  style: TextStyle(
+                    fontSize: 40.0,
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+              ),
+            ),
+            const SizedBox(
+              height: 10.0,
+            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
@@ -52,6 +69,66 @@ class _GameScreenState extends State<GameScreen> {
                     print('aa');
                   },
                   child: const Text('Enter'),
+                ),
+              ],
+            ),
+            const SizedBox(
+              height: 10.0,
+            ),
+            Column(
+              children: <Widget>[
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: <Widget>[
+                    NumberButton(
+                      press: () {},
+                      text: const Text('1'),
+                    ),
+                    NumberButton(
+                      press: () {},
+                      text: const Text('2'),
+                    ),
+                    NumberButton(
+                      press: () {},
+                      text: const Text('3'),
+                    ),
+                    NumberButton(
+                      press: () {},
+                      text: const Text('4'),
+                    ),
+                    NumberButton(
+                      press: () {},
+                      text: const Text('5'),
+                    ),
+                  ],
+                ),
+                const SizedBox(
+                  height: 10.0,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: <Widget>[
+                    NumberButton(
+                      press: () {},
+                      text: const Text('6'),
+                    ),
+                    NumberButton(
+                      press: () {},
+                      text: const Text('7'),
+                    ),
+                    NumberButton(
+                      press: () {},
+                      text: const Text('8'),
+                    ),
+                    NumberButton(
+                      press: () {},
+                      text: const Text('9'),
+                    ),
+                    NumberButton(
+                      press: () {},
+                      text: const Text('0'),
+                    ),
+                  ],
                 ),
               ],
             )
